@@ -68,7 +68,8 @@ public class Server extends IntentService {
                         if (
                                 listNew.get(j).processName.equals("system") || listNew.get(j).processName.equals("com.android.phone") ||
                                 listNew.get(j).processName.equals("com.android.systemui") || listNew.get(j).processName.equals("com.android.launcher") ||
-                                listNew.get(j).processName.equals("android.process.acore") || listNew.get(j).processName.equals(newApp)){
+                                listNew.get(j).processName.equals("android.process.acore") || listNew.get(j).processName.equals("com.android.nfc") ||
+                                listNew.get(j).processName.equals(newApp)){
                         }
                         else{
                             try {
