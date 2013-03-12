@@ -12,7 +12,7 @@
     <option name="selection" value="[Full]" />
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="server " />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="server" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aa37a82-d8c0-4b6b-9e16-fa649158644c" name="Default" comment="" />
@@ -20,8 +20,8 @@
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/res/values/strings.xml" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1362676401218" ignored="false" />
     <file path="/MyActivity.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1362991969552" ignored="false" />
-    <file path="/Server.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1363004037588" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1362996415240" ignored="false" />
+    <file path="/Server.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1363110273254" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1363086760126" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/KVP/ProcessMonitor/R.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1362804743160" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/KVP/ProcessMonitor/Manifest.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1362948577839" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/KVP/ProcessMonitor/BuildConfig.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1362996428985" ignored="false" />
@@ -40,6 +40,9 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -74,9 +77,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -86,10 +86,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="8" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.69287467">
+            <state line="27" column="8" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,18 +98,20 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="18" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
+            <state line="6" column="79" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Server.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="63" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0">
+            <state line="70" column="88" selection-start="3672" selection-end="3693" vertical-scroll-proportion="0.46700507">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#Server#0;class#Server#0" expanded="false" />
+                <element signature="method#onCreate#0;class#Server#0" expanded="false" />
+                <element signature="method#getTimeWork#0;class#Server#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -127,8 +129,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Boot.java" />
         <option value="$PROJECT_DIR$/src/com/KVP/ProcessMonitor/MyActivity.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" />
       </list>
     </option>
@@ -237,10 +239,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="recentsLimit" value="5" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="AndroidLayoutSelectedEditor" value="android-designer" />
@@ -279,6 +281,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -304,19 +319,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -423,17 +425,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="32" width="1026" height="575" extended-state="6" />
+    <frame x="6" y="32" width="1026" height="575" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48498845" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5635104" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.93764436" sideWeight="0.34867075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.93764436" sideWeight="0.6441718" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794458" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -446,7 +449,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924336" sideWeight="0.52424943" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -529,16 +531,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="63" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#onCreate#0;class#Server#0" expanded="false" />
+            <element signature="method#getTimeWork#0;class#Server#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -562,16 +564,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="2" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#onCreate#0;class#Server#0" expanded="false" />
+            <element signature="method#getTimeWork#0;class#Server#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -595,51 +597,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="33" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#onCreate#0;class#Server#0" expanded="false" />
+            <element signature="method#getTimeWork#0;class#Server#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="18" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="63" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="8" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.69287467">
+        <state line="27" column="8" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="79" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="88" selection-start="3672" selection-end="3693" vertical-scroll-proportion="0.46700507">
+          <folding>
+            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#onCreate#0;class#Server#0" expanded="false" />
+            <element signature="method#getTimeWork#0;class#Server#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

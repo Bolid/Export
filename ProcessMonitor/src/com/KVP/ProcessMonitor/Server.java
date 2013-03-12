@@ -33,21 +33,54 @@ public class Server extends IntentService {
     protected void onHandleIntent(Intent intent) {
         ActivityManager activityManager = (ActivityManager)this.getSystemService(ACTIVITY_SERVICE);
         List <ActivityManager.RunningAppProcessInfo> listNew = null;
+        Long timeStart = null;
+        Long timeStop;
         while (work){
             listNew = activityManager.getRunningAppProcesses();
-                for (int j = 0; j < listNew.size(); j++)
-                    if ((listNew.get(j).importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND)){
-                        if (listNew.get(j).processName.equals("system") || listNew.get(j).processName.equals("com.android.phone") || listNew.get(j).processName.equals("com.android.systemui") || listNew.get(j).processName.equals(newApp));
-                        else{
+            if (newApp != null)
+                for (int j = 0; j < listNew.size(); j++){
+                    if (listNew.get(j).processName.equals(newApp))
+                        if (listNew.get(j).importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_BACKGROUND){
+                            calendar = Calendar.getInstance();
+                            timeStop = Long.valueOf(calendar.get(Calendar.HOUR))*3600000 + Long.valueOf(calendar.get(Calendar.MINUTE))*60000 + Long.valueOf(calendar.get(Calendar.SECOND))*1000;
                             try {
-                                calendar = Calendar.getInstance();
-                                Log.v(TAG, pattern.format(calendar.getTime()) +" Запустили приложение: " + listNew.get(j).processName);
                                 FileWriter fileWriter = new FileWriter(Environment.getExternalStorageDirectory() + "/NewApplicationStart.log", true);
-                                fileWriter.append(String.valueOf(pattern.format(calendar.getTime())) + " Запустили приложение: "+ listNew.get(j).processName + "\n");
+                                fileWriter.append(String.valueOf(pattern.format(calendar.getTime())) + " Закрыли приложение: "+ newApp + "\n");
+                                fileWriter.append("\t\t\t\t\t\t\t\t\t\tПриложение "+newApp+" работало: "+ getTimeWork(timeStart, timeStop)+"\n");
+                                fileWriter.append("--------------------------------------------\n");
                                 fileWriter.close();
                                 fileWriter = null;
+                                calendar = Calendar.getInstance();
+                                Log.v(TAG, pattern.format(calendar.getTime()) +" Закрыли приложение: " + newApp);
+                            } catch (FileNotFoundException fnfe){
+                                Log.e(TAG, "Ошибка открытия файла: ", fnfe);
+                            } catch (IOException ioe) {
+                                Log.e(TAG, "Ошибка записи в файл: ", ioe);
+                            } catch (Exception e){
+                                Log.e(TAG, "Неизвестная ошибка при записи: ", e);
+                            }
+                            newApp = null;
+                            break;
+                        }
+                }
+                for (int j = 0; j < listNew.size(); j++){
+                    if (listNew.get(j).importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND){
+                        if (
+                                listNew.get(j).processName.equals("system") || listNew.get(j).processName.equals("com.android.phone") ||
+                                listNew.get(j).processName.equals("com.android.systemui") || listNew.get(j).processName.equals("com.android.launcher") ||
+                                listNew.get(j).processName.equals("android.process.acore") || listNew.get(j).processName.equals(newApp)){
+                        }
+                        else{
+                            try {
                                 newApp = listNew.get(j).processName;
-                                listNew = null;
+                                calendar = Calendar.getInstance();
+                                timeStart = Long.valueOf(calendar.get(Calendar.HOUR))*3600000 + Long.valueOf(calendar.get(Calendar.MINUTE))*60000 + Long.valueOf(calendar.get(Calendar.SECOND))*1000;
+                                Log.v(TAG, pattern.format(calendar.getTime()) +" Запустили приложение: " + newApp);
+                                FileWriter fileWriter = new FileWriter(Environment.getExternalStorageDirectory() + "/NewApplicationStart.log", true);
+                                fileWriter.append("--------------------------------------------\n");
+                                fileWriter.append(String.valueOf(pattern.format(calendar.getTime())) + " Запустили приложение: "+ newApp + "\n");
+                                fileWriter.close();
+                                fileWriter = null;
                                 break;
                             } catch (FileNotFoundException fnfe) {
                                 Log.e(TAG, "Ошибка открытия файла: ", fnfe);
@@ -58,15 +91,42 @@ public class Server extends IntentService {
                             }
                         }
                     }
+                }
             try {
-                Thread.sleep(5000);
+                listNew = null;
+                System.gc();
+                //Thread.sleep(5000);
             } catch (Exception e) {
                 Log.e(TAG, "Неизвестная ошибка при задержке: ", e);
             }
         }
     }
+
     public void onDestroy(){
         work = false;
         super.onDestroy();
+    }
+
+    public String getTimeWork(Long timeStart, Long timeStop){
+        Long timeWork = timeStop - timeStart;
+        int hour = 0;
+        int minute = 0;
+        int second = 0;
+
+        while (timeWork >= 1000){
+            if (timeWork >= 3600000){
+                timeStart -= 3600000;
+                hour++;
+            }
+            else if (timeWork >= 60000){
+                timeWork -= 60000;
+                minute++;
+            }
+            else if (timeWork >= 1000){
+                timeWork -= 1000;
+                second++;
+            }
+        }
+        return String.valueOf(hour) +":"+ String.valueOf(minute) +":"+ String.valueOf(second);
     }
 }
