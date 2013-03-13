@@ -3,6 +3,8 @@ package com.KVP.ProcessMonitor;
 import android.app.ActivityManager;
 import android.app.IntentService;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.os.Environment;
 import android.util.Log;
 
@@ -32,7 +34,24 @@ public class Server extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         ActivityManager activityManager = (ActivityManager)this.getSystemService(ACTIVITY_SERVICE);
+        PackageManager packageManager = this.getPackageManager();
+        ApplicationInfo ai;
         List <ActivityManager.RunningAppProcessInfo> listNew = null;
+        List<ApplicationInfo> allApplication = packageManager.getInstalledApplications(0);
+        try {
+            FileWriter fileWriter = new FileWriter(Environment.getExternalStorageDirectory() + "/NewApplicationStart.log", true);
+            fileWriter.append( "Установленные приложения:\n");
+            for (int j = 0; j < allApplication.size(); j++){
+                fileWriter.append(j+1+") Пакет: "+allApplication.get(j).packageName+" Название приложения: "+packageManager.getApplicationLabel(allApplication.get(j)).toString()+"\n");
+            }
+            fileWriter.close();
+            fileWriter = null;
+        }
+        catch (FileNotFoundException fnfe){
+            Log.e(TAG, "Ошибка открытия файла: ", fnfe);
+        } catch (IOException ioe) {
+            Log.e(TAG, "Ошибка записи в файл: ", ioe);
+        }
         Long timeStart = null;
         Long timeStop;
         while (work){
@@ -45,13 +64,13 @@ public class Server extends IntentService {
                             timeStop = Long.valueOf(calendar.get(Calendar.HOUR))*3600000 + Long.valueOf(calendar.get(Calendar.MINUTE))*60000 + Long.valueOf(calendar.get(Calendar.SECOND))*1000;
                             try {
                                 FileWriter fileWriter = new FileWriter(Environment.getExternalStorageDirectory() + "/NewApplicationStart.log", true);
-                                fileWriter.append(String.valueOf(pattern.format(calendar.getTime())) + " Закрыли приложение: "+ newApp + "\n");
-                                fileWriter.append("\t\t\t\t\t\t\t\t\t\tПриложение "+newApp+" работало: "+ getTimeWork(timeStart, timeStop)+"\n");
+                                fileWriter.append(String.valueOf(pattern.format(calendar.getTime())) + " Закрыли процесс: "+ newApp + "\n");
+                                fileWriter.append("\t\t\t\t\t\t\t\t\t\tПроцесс "+newApp+" работал: "+ getTimeWork(timeStart, timeStop)+"\n");
                                 fileWriter.append("--------------------------------------------\n");
                                 fileWriter.close();
                                 fileWriter = null;
                                 calendar = Calendar.getInstance();
-                                Log.v(TAG, pattern.format(calendar.getTime()) +" Закрыли приложение: " + newApp);
+                                Log.v(TAG, pattern.format(calendar.getTime()) +" Закрыли процесс: " + newApp);
                             } catch (FileNotFoundException fnfe){
                                 Log.e(TAG, "Ошибка открытия файла: ", fnfe);
                             } catch (IOException ioe) {
@@ -73,13 +92,14 @@ public class Server extends IntentService {
                         }
                         else{
                             try {
+                                ai = (ApplicationInfo)packageManager.getApplicationInfo(listNew.get(j).processName, 0);
                                 newApp = listNew.get(j).processName;
                                 calendar = Calendar.getInstance();
                                 timeStart = Long.valueOf(calendar.get(Calendar.HOUR))*3600000 + Long.valueOf(calendar.get(Calendar.MINUTE))*60000 + Long.valueOf(calendar.get(Calendar.SECOND))*1000;
-                                Log.v(TAG, pattern.format(calendar.getTime()) +" Запустили приложение: " + newApp);
+                                Log.v(TAG, pattern.format(calendar.getTime()) +" Запустили приложение: " + newApp +" Название: "+ packageManager.getApplicationLabel(ai));
                                 FileWriter fileWriter = new FileWriter(Environment.getExternalStorageDirectory() + "/NewApplicationStart.log", true);
                                 fileWriter.append("--------------------------------------------\n");
-                                fileWriter.append(String.valueOf(pattern.format(calendar.getTime())) + " Запустили приложение: "+ newApp + "\n");
+                                fileWriter.append(String.valueOf(pattern.format(calendar.getTime())) + " Запустили процесс: "+ newApp +" Название приложения: "+packageManager.getApplicationLabel(ai)+"\n");
                                 fileWriter.close();
                                 fileWriter = null;
                                 break;
