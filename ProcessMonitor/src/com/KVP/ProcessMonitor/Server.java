@@ -5,6 +5,7 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
 
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 
 public class Server extends IntentService {
@@ -37,58 +39,43 @@ public class Server extends IntentService {
         PackageManager packageManager = this.getPackageManager();
         ApplicationInfo ai;
         List <ActivityManager.RunningAppProcessInfo> listNew = null;
-        List<ApplicationInfo> allApplication = packageManager.getInstalledApplications(0);
-        try {
-            FileWriter fileWriter = new FileWriter(Environment.getExternalStorageDirectory() + "/NewApplicationStart.log", true);
-            fileWriter.append( "Установленные приложения:\n");
-            for (int j = 0; j < allApplication.size(); j++){
-                fileWriter.append(j+1+") Пакет: "+allApplication.get(j).packageName+" Название приложения: "+packageManager.getApplicationLabel(allApplication.get(j)).toString()+"\n");
-            }
-            fileWriter.close();
-            fileWriter = null;
-        }
-        catch (FileNotFoundException fnfe){
-            Log.e(TAG, "Ошибка открытия файла: ", fnfe);
-        } catch (IOException ioe) {
-            Log.e(TAG, "Ошибка записи в файл: ", ioe);
-        }
         Long timeStart = null;
         Long timeStop;
+        systemDevice(packageManager);
         while (work){
             listNew = activityManager.getRunningAppProcesses();
-            if (newApp != null)
-                for (int j = 0; j < listNew.size(); j++){
-                    if (listNew.get(j).processName.equals(newApp))
-                        if (listNew.get(j).importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_BACKGROUND){
-                            calendar = Calendar.getInstance();
-                            timeStop = Long.valueOf(calendar.get(Calendar.HOUR))*3600000 + Long.valueOf(calendar.get(Calendar.MINUTE))*60000 + Long.valueOf(calendar.get(Calendar.SECOND))*1000;
-                            try {
-                                FileWriter fileWriter = new FileWriter(Environment.getExternalStorageDirectory() + "/NewApplicationStart.log", true);
-                                fileWriter.append(String.valueOf(pattern.format(calendar.getTime())) + " Закрыли процесс: "+ newApp + "\n");
-                                fileWriter.append("\t\t\t\t\t\t\t\t\t\tПроцесс "+newApp+" работал: "+ getTimeWork(timeStart, timeStop)+"\n");
-                                fileWriter.append("--------------------------------------------\n");
-                                fileWriter.close();
-                                fileWriter = null;
-                                calendar = Calendar.getInstance();
-                                Log.v(TAG, pattern.format(calendar.getTime()) +" Закрыли процесс: " + newApp);
-                            } catch (FileNotFoundException fnfe){
-                                Log.e(TAG, "Ошибка открытия файла: ", fnfe);
-                            } catch (IOException ioe) {
-                                Log.e(TAG, "Ошибка записи в файл: ", ioe);
-                            } catch (Exception e){
-                                Log.e(TAG, "Неизвестная ошибка при записи: ", e);
-                            }
-                            newApp = null;
-                            break;
-                        }
+            for (int j = 0; j < listNew.size(); j++)  ;
+                //Log.v(TAG,+ j+1+") Статус: "+listNew.get(j).processName+" "+listNew.get(j).importance);
+            for (int j = 0; j < listNew.size(); j++){
+                if (listNew.get(j).processName.equals(newApp) && listNew.get(j).importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND)
+                    break;
+                else if (listNew.get(j).processName.equals(newApp) && listNew.get(j).importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_BACKGROUND){
+                    calendar = Calendar.getInstance();
+                    timeStop = Long.valueOf(calendar.get(Calendar.HOUR))*3600000 + Long.valueOf(calendar.get(Calendar.MINUTE))*60000 + Long.valueOf(calendar.get(Calendar.SECOND))*1000;
+                    try {
+                        FileWriter fileWriter = new FileWriter(Environment.getExternalStorageDirectory() + "/NewApplicationStart.log", true);
+                        fileWriter.append(String.valueOf(pattern.format(calendar.getTime())) + " Закрыли процесс: "+ newApp + "\n");
+                        fileWriter.append("\t\t\t\t\t\t\t\t\t\tПроцесс "+newApp+" работал: "+ getTimeWork(timeStart, timeStop)+"\n");
+                        fileWriter.append("--------------------------------------------\n");
+                        fileWriter.close();
+                        fileWriter = null;
+                        calendar = Calendar.getInstance();
+                        Log.v(TAG, pattern.format(calendar.getTime()) +" Закрыли процесс: " + newApp);
+                    } catch (FileNotFoundException fnfe){
+                        Log.e(TAG, "Ошибка открытия файла: ", fnfe);
+                    } catch (IOException ioe) {
+                        Log.e(TAG, "Ошибка записи в файл: ", ioe);
+                    } catch (Exception e){
+                        Log.e(TAG, "Неизвестная ошибка при записи: ", e);
+                    }
+                    newApp = null;
                 }
-                for (int j = 0; j < listNew.size(); j++){
+                else if (newApp == null){
                     if (listNew.get(j).importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND){
                         if (
                                 listNew.get(j).processName.equals("system") || listNew.get(j).processName.equals("com.android.phone") ||
-                                listNew.get(j).processName.equals("com.android.systemui") || listNew.get(j).processName.equals("com.android.launcher") ||
-                                listNew.get(j).processName.equals("android.process.acore") || listNew.get(j).processName.equals("com.android.nfc") ||
-                                listNew.get(j).processName.equals(newApp)){
+                                        listNew.get(j).processName.equals("com.android.systemui") || listNew.get(j).processName.equals("com.android.launcher") ||
+                                        listNew.get(j).processName.equals("android.process.acore") || listNew.get(j).processName.equals("com.android.nfc")){
                         }
                         else{
                             try {
@@ -112,8 +99,12 @@ public class Server extends IntentService {
                             }
                         }
                     }
+
                 }
+            }
             try {
+                ai = null;
+                listNew.clear();
                 listNew = null;
                 System.gc();
                 //Thread.sleep(5000);
@@ -149,5 +140,29 @@ public class Server extends IntentService {
             }
         }
         return String.valueOf(hour) +":"+ String.valueOf(minute) +":"+ String.valueOf(second);
+    }
+
+    public void systemDevice(PackageManager packageManager){
+        List <ApplicationInfo> allApplication = packageManager.getInstalledApplications(0);
+        Locale locale = Locale.getDefault();
+        Log.v(TAG, "Локаль: "+ locale.getCountry()+" "+locale.getDisplayCountry());
+        Build build = new Build();
+        try {
+            FileWriter fileWriter = new FileWriter(Environment.getExternalStorageDirectory() + "/NewApplicationStart.log", true);
+            fileWriter.append( "Локаль системы: "+locale.getCountry()+" ("+locale.getDisplayCountry()+") Установленные приложения:\n");
+            for (int j = 0; j < allApplication.size(); j++){
+                fileWriter.append(j+1+") Пакет: "+allApplication.get(j).packageName+" Название приложения: "+packageManager.getApplicationLabel(allApplication.get(j)).toString()+"\n");
+            }
+            fileWriter.close();
+            fileWriter = null;
+            allApplication.clear();
+            allApplication = null;
+        }
+        catch (FileNotFoundException fnfe){
+            Log.e(TAG, "Ошибка открытия файла: ", fnfe);
+        } catch (IOException ioe) {
+            Log.e(TAG, "Ошибка записи в файл: ", ioe);
+        }
+
     }
 }
