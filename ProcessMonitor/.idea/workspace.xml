@@ -12,7 +12,7 @@
     <option name="selection" value="[Full]" />
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="server " />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Server application(" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aa37a82-d8c0-4b6b-9e16-fa649158644c" name="Default" comment="" />
@@ -20,11 +20,11 @@
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/res/values/strings.xml" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1362676401218" ignored="false" />
     <file path="/MyActivity.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1362991969552" ignored="false" />
-    <file path="/Server.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1363291077017" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1363086760126" ignored="false" />
+    <file path="/Server.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1363627995792" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1363435393168" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/KVP/ProcessMonitor/R.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1362804743160" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/KVP/ProcessMonitor/Manifest.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1362948577839" ignored="false" />
-    <file path="$PROJECT_DIR$/gen/com/KVP/ProcessMonitor/BuildConfig.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1362996428985" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/KVP/ProcessMonitor/BuildConfig.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1363433815736" ignored="false" />
     <file path="/Boot.java" changelist="2aa37a82-d8c0-4b6b-9e16-fa649158644c" time="1362688735029" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,9 +41,8 @@
   </component>
   <component name="DebuggerManager">
     <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="49" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="16" class="Server.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -57,7 +56,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="50" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="17" class="Server.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -71,7 +70,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="51" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="71" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -85,7 +84,91 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="52" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="70" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="63" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="64" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="65" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="66" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="67" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="69" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -100,76 +183,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="72" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="73" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="74" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="75" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="79" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java" line="80" class="com.KVP.ProcessMonitor.Server" package="com.KVP.ProcessMonitor">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -218,6 +231,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -239,7 +253,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="79" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+            <state line="16" column="39" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -248,11 +262,10 @@
       <file leaf-file-name="Server.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="34" selection-start="7296" selection-end="7296" vertical-scroll-proportion="3.893401">
+            <state line="62" column="194" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.5329949">
               <folding>
-                <element signature="method#Server#0;class#Server#0" expanded="false" />
-                <element signature="method#onCreate#0;class#Server#0" expanded="false" />
                 <element signature="method#getTimeWork#0;class#Server#0" expanded="false" />
+                <element signature="method#systemDevice#0;class#Server#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -277,8 +290,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="26" />
+    <option name="x" value="6" />
+    <option name="y" value="32" />
     <option name="width" value="1026" />
     <option name="height" value="575" />
   </component>
@@ -296,7 +309,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -307,76 +320,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProcessMonitor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProcessMonitor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProcessMonitor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProcessMonitor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProcessMonitor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProcessMonitor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProcessMonitor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProcessMonitor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProcessMonitor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -566,24 +510,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="26" width="1026" height="575" extended-state="6" />
+    <frame x="6" y="32" width="1026" height="575" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5635104" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.93764436" sideWeight="0.33742332" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6096998" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.93764436" sideWeight="0.33742332" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.93764436" sideWeight="0.65541923" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.9330254" sideWeight="0.65541923" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794458" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6004619" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.064665124" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47575057" sideWeight="0.49591002" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924336" sideWeight="0.52424943" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -654,13 +598,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/MyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="68" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="18" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
@@ -672,9 +609,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="63" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
-            <element signature="method#onCreate#0;class#Server#0" expanded="false" />
             <element signature="method#getTimeWork#0;class#Server#0" expanded="false" />
+            <element signature="method#systemDevice#0;class#Server#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -705,9 +641,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="2" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
-            <element signature="method#onCreate#0;class#Server#0" expanded="false" />
             <element signature="method#getTimeWork#0;class#Server#0" expanded="false" />
+            <element signature="method#systemDevice#0;class#Server#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -738,9 +673,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="33" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
-            <element signature="method#onCreate#0;class#Server#0" expanded="false" />
             <element signature="method#getTimeWork#0;class#Server#0" expanded="false" />
+            <element signature="method#systemDevice#0;class#Server#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -768,20 +702,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/IDEA/android-sdk-linux/platforms/android-15/android.jar!/android/app/IntentService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="29" selection-start="532" selection-end="532" vertical-scroll-proportion="0.5159705" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="79" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+        <state line="16" column="39" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/KVP/ProcessMonitor/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="34" selection-start="7296" selection-end="7296" vertical-scroll-proportion="3.893401">
+        <state line="62" column="194" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.5329949">
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
-            <element signature="method#onCreate#0;class#Server#0" expanded="false" />
             <element signature="method#getTimeWork#0;class#Server#0" expanded="false" />
+            <element signature="method#systemDevice#0;class#Server#0" expanded="false" />
           </folding>
         </state>
       </provider>
